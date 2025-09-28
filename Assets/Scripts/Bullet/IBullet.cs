@@ -4,6 +4,7 @@ using UnityEngine.Pool;
 public interface IBullet
 {
     public Vector2 direction { get; set; }
+    public Vector2 position { get; set; }
     public GameObject gameObjectRef { get; }
     public ObjectPool<IBullet> pool { get; set; }
     public void Activate();

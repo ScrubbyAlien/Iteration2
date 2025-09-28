@@ -21,18 +21,4 @@ public class PlayerBulletFactory : BulletFactory
         IBullet bullet = bulletInstance.GetComponent<IBullet>();
         return bullet;
     }
-    /// <inheritdoc />
-    protected override void PoolOnGet(IBullet bullet) {
-        bullet.Activate();
-        bullet.pool = bulletPool;
-    }
-    /// <inheritdoc />
-    protected override void PoolOnRelease(IBullet bullet) {
-        bullet.Deactivate();
-        bullet.pool = null;
-    }
-    /// <inheritdoc />
-    protected override void PoolOnDestroy(IBullet bullet) {
-        Destroy(bullet.gameObjectRef);
-    }
 }

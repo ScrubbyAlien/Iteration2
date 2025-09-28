@@ -16,7 +16,7 @@ public class ShipGuns : MonoBehaviour
         if (!firingCooldown.on) {
             IBullet bullet = bulletFactory.GetBullet();
             bullet.direction = Vector2.up;
-
+            bullet.position = transform.position;
             firingCooldown.Start();
         }
     }
