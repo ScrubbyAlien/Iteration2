@@ -14,7 +14,19 @@ PrefabInstance:
       objectReference: {fileID: -1753573034, guid: fb90598eb156a3447a4af2568a06ed91, type: 3}
     - target: {fileID: 5163385099153946720, guid: eebb0ec37fdb8ab4a8a7d1ceb654154e, type: 3}
       propertyPath: m_Name
-      value: BasicBullet Variant
+      value: EnemyBasicBullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 8083430366621105258, guid: eebb0ec37fdb8ab4a8a7d1ceb654154e, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8083430366621105258, guid: eebb0ec37fdb8ab4a8a7d1ceb654154e, type: 3}
+      propertyPath: affectsLayers.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8083430366621105258, guid: eebb0ec37fdb8ab4a8a7d1ceb654154e, type: 3}
+      propertyPath: affectedLayers.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 8928071732640910778, guid: eebb0ec37fdb8ab4a8a7d1ceb654154e, type: 3}
       propertyPath: m_LocalPosition.x

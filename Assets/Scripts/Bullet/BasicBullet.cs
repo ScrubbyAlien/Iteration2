@@ -1,12 +1,10 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Pool;
 
 public class BasicBullet : MonoBehaviour, IBullet
 {
-    public Vector2 direction {
-        get => transform.up;
-        set => transform.up = value;
-    }
+    public Vector2 direction { get; set; }
     public Vector2 position {
         get => transform.position;
         set => transform.position = (Vector3)value + Vector3.forward;
@@ -15,9 +13,15 @@ public class BasicBullet : MonoBehaviour, IBullet
     public GameObject gameObjectRef => gameObject;
     public ObjectPool<IBullet> pool { get; set; }
 
-    [SerializeField]
+    [SerializeField, Min(0)]
     private float speed, lifetime;
     private Cooldown lifetimeCooldown;
+    [SerializeField]
+    private LayerMask affectsLayers;
+    [SerializeField, Min(0)]
+    private int damage;
+
+    public UnityEvent OnHit;
 
     private void Awake() {
         lifetimeCooldown = new Cooldown(lifetime);
@@ -30,6 +34,15 @@ public class BasicBullet : MonoBehaviour, IBullet
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (LayerAffected(affectsLayers, other.gameObject.layer)) {
+            IDamagable damagable = other.GetComponent<IDamagable>();
+            damagable?.TakeDamage(damage);
+            OnHit?.Invoke();
+            pool.Release(this);
+        }
+    }
+
     public void Activate() {
         gameObject.SetActive(true);
         lifetimeCooldown.Start();
@@ -38,6 +51,10 @@ public class BasicBullet : MonoBehaviour, IBullet
         gameObject.SetActive(false);
         lifetimeCooldown.Stop();
         transform.position = Vector3.zero;
+    }
+
+    protected static bool LayerAffected(LayerMask affected, int layer) {
+        return affected == (affected | (1 << layer));
     }
 
     // todo: make bullets deal damage

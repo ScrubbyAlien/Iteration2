@@ -139,3 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   lifetime: 2
+  affectsLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  damage: 1

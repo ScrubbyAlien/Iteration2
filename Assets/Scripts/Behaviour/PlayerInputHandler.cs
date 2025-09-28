@@ -3,15 +3,8 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(PlayerInput))]
-public class PlayerInputHandler : MonoBehaviour
+public class PlayerInputHandler : ShipBehaviour
 {
-    [SerializeField]
-    private UnityEvent<Vector2> Move;
-    [SerializeField]
-    private UnityEvent Stop;
-    [SerializeField]
-    private UnityEvent Shoot;
-
     private bool shooting;
 
     private void OnMove(InputValue value) {
