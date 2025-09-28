@@ -25,8 +25,9 @@ public class ExposeFieldsDrawer : PropertyDrawer
             EditorGUI.indentLevel++;
 
             // Draw object properties
-            if (!editor)
+            if (!editor) {
                 Editor.CreateCachedEditor(property.objectReferenceValue, typeof(MonoBehaviourEditor), ref editor);
+            }
             editor.OnInspectorGUI();
 
             // Set indent back to what it was
