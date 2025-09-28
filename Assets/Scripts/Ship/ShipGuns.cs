@@ -8,6 +8,9 @@ public class ShipGuns : MonoBehaviour
     private float firingRate;
     private Cooldown firingCooldown;
 
+    [SerializeField, ExposeFields]
+    private GunConfiguration gunConfig;
+
     private void Awake() {
         firingCooldown = new Cooldown(1 / firingRate);
     }

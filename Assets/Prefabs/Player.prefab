@@ -299,3 +299,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletFactory: {fileID: 11400000, guid: 66f8c22205f15564aaa7b298c7d9c958, type: 2}
   firingRate: 3
+  gunConfig: {fileID: 11400000, guid: 4f21320908ef2354e9d0ca7daacd2dcb, type: 2}
