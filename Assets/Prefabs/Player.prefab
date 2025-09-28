@@ -297,6 +297,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb6bf90049b713b45800edeef9e3857a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletFactory: {fileID: 11400000, guid: 66f8c22205f15564aaa7b298c7d9c958, type: 2}
+  bulletFactory: {fileID: 11400000, guid: 8eb51cfbfda1f6b449f48bc9b684fab9, type: 2}
   gunConfig: {fileID: 11400000, guid: 4f21320908ef2354e9d0ca7daacd2dcb, type: 2}
   firingRate: 4

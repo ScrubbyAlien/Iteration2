@@ -1,40 +1,56 @@
 using UnityEngine;
 using UnityEngine.Pool;
 
-public abstract class BulletFactory : ScriptableObject
+[CreateAssetMenu(fileName = "BulletFactory", menuName = "Bullet Factory")]
+public class BulletFactory : ScriptableObject
 {
-    protected ObjectPool<IBullet> bulletPool;
-    protected GameObject poolParent;
-    protected abstract string poolName { get; }
-    public abstract IBullet GetBullet();
-    protected abstract IBullet PoolCreateBullet();
+    [SerializeField]
+    private GameObject bulletPrefab;
+    [SerializeField]
+    private string poolName;
+    [SerializeField]
+    private bool collectionCheck = true;
+    [SerializeField]
+    private int defaultCapacity = 20;
+    [SerializeField]
+    private int maxCapacity = 100;
 
-    protected bool collectionCheck;
-    protected int defaultCapacity = 20;
-    protected int maxCapacity = 100;
+    private ObjectPool<IBullet> bulletPool;
+    private GameObject poolParent;
+    public bool poolParentExist => poolParent;
+
+    public IBullet GetBullet() {
+        return bulletPool.Get();
+    }
 
     protected virtual void OnEnable() {
-        poolParent = FindPoolParent();
         bulletPool = new ObjectPool<IBullet>(
             PoolCreateBullet, PoolOnGet, PoolOnRelease, PoolOnDestroy,
             collectionCheck, defaultCapacity, maxCapacity
         );
     }
 
-    private GameObject FindPoolParent() {
+    public GameObject FindPoolParent() {
         if (poolParent) return poolParent;
         return GameObject.Find(poolName) ?? new GameObject(poolName);
     }
 
-    protected virtual void PoolOnGet(IBullet bullet) {
+    private IBullet PoolCreateBullet() {
+        FindPoolParent();
+        GameObject bulletInstance = Instantiate(bulletPrefab, poolParent.transform);
+        bulletInstance.SetActive(false);
+        IBullet bullet = bulletInstance.GetComponent<IBullet>();
+        return bullet;
+    }
+    private void PoolOnGet(IBullet bullet) {
         bullet.Activate();
         bullet.pool = bulletPool;
     }
-    protected virtual void PoolOnRelease(IBullet bullet) {
+    private void PoolOnRelease(IBullet bullet) {
         bullet.Deactivate();
         bullet.pool = null;
     }
-    protected virtual void PoolOnDestroy(IBullet bullet) {
+    private void PoolOnDestroy(IBullet bullet) {
         Destroy(bullet.gameObjectRef);
     }
 }

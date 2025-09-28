@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a488026322be364980d6468214939d7, type: 3}
-  m_Name: PlayerBulletFactory
+  m_Script: {fileID: 11500000, guid: 812e8eead953e7444b4a23dafd6f595e, type: 3}
+  m_Name: OneBarrelDown
   m_EditorClassIdentifier: 
-  playerBulletPrefab: {fileID: 5163385099153946720, guid: eebb0ec37fdb8ab4a8a7d1ceb654154e, type: 3}
+  guns:
+  - position: {x: 0, y: -0.36}
+    angle: -90

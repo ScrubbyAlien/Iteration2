@@ -27,6 +27,7 @@ public class ShipGuns : MonoBehaviour
 
     private void OnDrawGizmosSelected() {
         Gizmos.color = Color.green;
+        if (!gunConfig) return;
         foreach (GunInfo gunInfo in gunConfig.guns) {
             Vector3 pos = transform.position + (Vector3)gunInfo.position;
             Gizmos.DrawLine(pos, pos + (Vector3)gunInfo.direction);
