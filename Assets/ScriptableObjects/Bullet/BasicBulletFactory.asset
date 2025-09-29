@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2105de141ef71da48b87baa6829a1a4c, type: 3}
   m_Name: BasicBulletFactory
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 5163385099153946720, guid: eebb0ec37fdb8ab4a8a7d1ceb654154e, type: 3}
+  prefab: {fileID: 5163385099153946720, guid: eebb0ec37fdb8ab4a8a7d1ceb654154e, type: 3}
   poolName: =====BasicBulletPool=====
   collectionCheck: 1
   defaultCapacity: 20

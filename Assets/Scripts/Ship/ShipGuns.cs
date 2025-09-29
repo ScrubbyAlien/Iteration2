@@ -17,7 +17,7 @@ public class ShipGuns : MonoBehaviour
     public void FireBullet() {
         if (!firingCooldown.on) {
             foreach (GunInfo gunInfo in gunConfig.guns) {
-                IBullet bullet = bulletFactory.GetBullet();
+                IBullet bullet = bulletFactory.GetProduct();
                 bullet.direction = gunInfo.direction;
                 bullet.position = transform.position + (Vector3)gunInfo.position;
             }

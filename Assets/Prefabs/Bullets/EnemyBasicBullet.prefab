@@ -18,6 +18,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8083430366621105258, guid: eebb0ec37fdb8ab4a8a7d1ceb654154e, type: 3}
       propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8083430366621105258, guid: eebb0ec37fdb8ab4a8a7d1ceb654154e, type: 3}
+      propertyPath: lifetime
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8083430366621105258, guid: eebb0ec37fdb8ab4a8a7d1ceb654154e, type: 3}

@@ -11,7 +11,7 @@ public class BasicBullet : MonoBehaviour, IBullet
     }
 
     public GameObject gameObjectRef => gameObject;
-    public ObjectPool<IBullet> pool { get; set; }
+    public ObjectPool<IPoolObject> pool { get; set; }
 
     [SerializeField, Min(0)]
     private float speed, lifetime;
@@ -35,7 +35,7 @@ public class BasicBullet : MonoBehaviour, IBullet
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (LayerAffected(affectsLayers, other.gameObject.layer)) {
+        if (IBullet.LayerAffected(affectsLayers, other.gameObject.layer)) {
             IDamagable damagable = other.GetComponent<IDamagable>();
             damagable?.TakeDamage(damage);
             OnHit?.Invoke();
@@ -52,10 +52,4 @@ public class BasicBullet : MonoBehaviour, IBullet
         lifetimeCooldown.Stop();
         transform.position = Vector3.zero;
     }
-
-    protected static bool LayerAffected(LayerMask affected, int layer) {
-        return affected == (affected | (1 << layer));
-    }
-
-    // todo: make bullets deal damage
 }

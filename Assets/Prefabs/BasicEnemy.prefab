@@ -180,7 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 6211931713980005373}
   xSpeed: 3
-  ySpeed: 1.5
+  ySpeed: 1
 --- !u!114 &8199364792867574708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletFactory: {fileID: 11400000, guid: 49e7e55b09786db4eb4140f1f7c9d63d, type: 2}
   gunConfig: {fileID: 11400000, guid: 0f97fd8bf5d91334688591ebeb65b580, type: 2}
-  firingRate: 1
+  firingRate: 0.4
 --- !u!114 &7328503612754539025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,6 +208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cad227be9490534b9f7f8690f1be4df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yBottom: -6
+  shootDelay: 2
   Move:
     m_PersistentCalls:
       m_Calls:
@@ -253,16 +255,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af30b847fc91e54eab2c9c33ac2c53e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hullStrength: 1
   OnTakeDamage:
     m_PersistentCalls:
       m_Calls: []
   OnDestroyed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4737511977477081042}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 7328503612754539025}
+        m_TargetAssemblyTypeName: BasicEnemy, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -271,4 +274,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  hullStrength: 1

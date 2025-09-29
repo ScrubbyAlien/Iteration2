@@ -119,37 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &123277729
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 123277730}
-  m_Layer: 0
-  m_Name: =====EnemyBasicBulletPool=====
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &123277730
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123277729}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,7 +341,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &707874740
+--- !u!1 &1747124671
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -380,21 +349,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 707874741}
+  - component: {fileID: 1747124673}
+  - component: {fileID: 1747124672}
   m_Layer: 0
-  m_Name: =====BasicBulletPool=====
+  m_Name: EnemySpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &707874741
+--- !u!114 &1747124672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747124671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb06bfeabc26edb4aa8cbe4ed9dd9a29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyFactory: {fileID: 11400000, guid: 61d1d63da9039a3489ea7039f01024f4, type: 2}
+  spawnDelaySeconds: 0
+  enemiesPerSecond: 0.5
+  ySpawnPosition: 6
+  minXSpawnPosition: -3.9534585
+  maxXSpawnPosition: 3.9839795
+  limitNumber: 0
+  enemyLimit: 16
+--- !u!4 &1747124673
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707874740}
+  m_GameObject: {fileID: 1747124671}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -644,6 +634,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 161869301209269521, guid: e102b9499d257b64dab7a8685be2ada1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.3888893
+      objectReference: {fileID: 0}
+    - target: {fileID: 161869301209269521, guid: e102b9499d257b64dab7a8685be2ada1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.6944447
+      objectReference: {fileID: 0}
     - target: {fileID: 1838682599369847436, guid: e102b9499d257b64dab7a8685be2ada1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -692,6 +690,14 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 8055153780003962710, guid: e102b9499d257b64dab7a8685be2ada1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.3888893
+      objectReference: {fileID: 0}
+    - target: {fileID: 8055153780003962710, guid: e102b9499d257b64dab7a8685be2ada1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.6944447
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -706,5 +712,4 @@ SceneRoots:
   - {fileID: 8493757813023398882}
   - {fileID: 4478920934971219862}
   - {fileID: 1434332870422367518}
-  - {fileID: 707874741}
-  - {fileID: 123277730}
+  - {fileID: 1747124673}

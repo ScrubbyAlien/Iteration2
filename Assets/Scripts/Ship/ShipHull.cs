@@ -4,12 +4,12 @@ using UnityEngine.Events;
 
 public class ShipHull : MonoBehaviour, IDamagable
 {
-    public UnityEvent<int> OnTakeDamage;
-    public UnityEvent OnDestroyed;
-
     [SerializeField]
     private int hullStrength;
     private int currenStrength;
+
+    public UnityEvent<int> OnTakeDamage;
+    public UnityEvent OnDestroyed;
 
     private void Start() {
         currenStrength = hullStrength;
