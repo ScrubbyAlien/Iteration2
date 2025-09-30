@@ -1,0 +1,17 @@
+ship
+https://opengameart.org/content/shmup-ships
+
+enemies, bullets
+https://opengameart.org/content/space-shooter-sprites
+
+background
+https://craftpix.net/freebies/free-pixel-sky-with-parallax-clouds-for-2d-games/
+
+planets
+https://craftpix.net/freebies/free-planets-in-space-pixel-game-background-pack/
+
+sounds
+https://opengameart.org/content/flatshot-complete-sfx-pack
+
+explosions
+https://opengameart.org/content/explosion-set-1-m484-games

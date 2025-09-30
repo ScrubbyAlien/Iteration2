@@ -37,9 +37,11 @@ public class BasicBullet : MonoBehaviour, IBullet
     private void OnTriggerEnter2D(Collider2D other) {
         if (IBullet.LayerAffected(affectsLayers, other.gameObject.layer)) {
             IDamagable damagable = other.GetComponent<IDamagable>();
-            damagable?.TakeDamage(damage);
-            OnHit?.Invoke();
-            pool.Release(this);
+            if (!damagable.invincible) {
+                damagable?.TakeDamage(damage);
+                OnHit?.Invoke();
+                pool.Release(this);
+            }
         }
     }
 

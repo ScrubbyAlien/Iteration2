@@ -9,14 +9,18 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8444774825743431340}
+  - component: {fileID: 3601302145433932096}
   - component: {fileID: 7635817219271210035}
   - component: {fileID: 791023334241747275}
   - component: {fileID: 8476886105176053582}
   - component: {fileID: 5338251329480990028}
+  - component: {fileID: 27985224029858163}
   - component: {fileID: 6543730229427987703}
   - component: {fileID: 485380052479048720}
   - component: {fileID: 4599968052138049706}
   - component: {fileID: 3237099150787536323}
+  - component: {fileID: 3624834874222339909}
+  - component: {fileID: 4867010448996620030}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -39,6 +43,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3601302145433932096
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8460546371102402531}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d97e222296325a4a868ede5187299ac, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &7635817219271210035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,10 +203,10 @@ PolygonCollider2D:
     m_Bits: 4294967295
   m_ContactCaptureLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_CallbackLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
@@ -214,6 +240,43 @@ PolygonCollider2D:
       - {x: 0.22507323, y: 0.22145614}
       - {x: 0.14371751, y: 0.44647554}
   m_UseDelaunayMesh: 0
+--- !u!70 &27985224029858163
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8460546371102402531}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.49, y: 0.8888889}
+  m_Direction: 0
 --- !u!114 &6543730229427987703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,6 +289,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d0d1370a62200b4d922293adbcfa18e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yBottom: 0
+  shootDelay: 0
   Move:
     m_PersistentCalls:
       m_Calls:
@@ -286,6 +351,106 @@ MonoBehaviour:
   body: {fileID: 8476886105176053582}
   xSpeed: 4
   ySpeed: 2
+  events:
+    MovingForward:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3624834874222339909}
+          m_TargetAssemblyTypeName: AnimatorController, Assembly-CSharp
+          m_MethodName: SetBoolTrue
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: forward
+            m_BoolArgument: 0
+          m_CallState: 2
+    Stopped:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3624834874222339909}
+          m_TargetAssemblyTypeName: AnimatorController, Assembly-CSharp
+          m_MethodName: SetBoolFalse
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: forward
+            m_BoolArgument: 0
+          m_CallState: 2
+    MovingLeft:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3624834874222339909}
+          m_TargetAssemblyTypeName: AnimatorController, Assembly-CSharp
+          m_MethodName: SetBoolTrue
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: side
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 4867010448996620030}
+          m_TargetAssemblyTypeName: SpriteEffect, Assembly-CSharp
+          m_MethodName: FlipX
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    MovingRight:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3624834874222339909}
+          m_TargetAssemblyTypeName: AnimatorController, Assembly-CSharp
+          m_MethodName: SetBoolTrue
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: side
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 4867010448996620030}
+          m_TargetAssemblyTypeName: SpriteEffect, Assembly-CSharp
+          m_MethodName: FlipX
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+    GoingStraight:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3624834874222339909}
+          m_TargetAssemblyTypeName: AnimatorController, Assembly-CSharp
+          m_MethodName: SetBoolFalse
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: side
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &4599968052138049706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,9 +478,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af30b847fc91e54eab2c9c33ac2c53e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hullStrength: 5
+  invincibilityTime: 1
   OnTakeDamage:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4867010448996620030}
+        m_TargetAssemblyTypeName: SpriteEffect, Assembly-CSharp
+        m_MethodName: StartFlicker
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDestroyed:
     m_PersistentCalls:
       m_Calls:
@@ -331,4 +510,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  hullStrength: 5
+--- !u!114 &3624834874222339909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8460546371102402531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5662eb6abcca6f14b9ea608a3b135af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4867010448996620030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8460546371102402531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b0fcd17df8606642b8970bfc85defe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flicksPerSecond: 20
