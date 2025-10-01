@@ -1,9 +1,16 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class ShipHull : MonoBehaviour, IDamagable
 {
+    [SerializeField]
+    private ExplosionLocator explosionLocator;
+
+    [SerializeField]
+    private ExplosionService.ExplosionParameters explosionParameters;
+
     [SerializeField]
     private int hullStrength;
     private int currenStrength;
@@ -14,6 +21,7 @@ public class ShipHull : MonoBehaviour, IDamagable
 
     public UnityEvent<int> OnTakeDamage;
     public UnityEvent OnDestroyed;
+    public UnityEvent OnExploded;
 
     private void Start() {
         currenStrength = hullStrength;
@@ -28,6 +36,17 @@ public class ShipHull : MonoBehaviour, IDamagable
             OnDestroyed?.Invoke();
         }
     }
+
+    public void Explode() {
+        explosionLocator.GetService().PlayExplosion(transform.position, explosionParameters);
+        StartCoroutine(ExplosionWait(explosionParameters.duration));
+    }
+
+    private IEnumerator ExplosionWait(float duration) {
+        yield return new WaitForSeconds(duration);
+        OnExploded?.Invoke();
+    }
+
     /// <inheritdoc />
     public bool invincible => invincibilityCooldown.on;
 }

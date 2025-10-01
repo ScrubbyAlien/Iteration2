@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class SpriteEffect : MonoBehaviour
 {
-    private SpriteRenderer renderer;
+    private SpriteRenderer spriteRenderer;
 
     [SerializeField]
     private float flicksPerSecond;
@@ -13,19 +13,19 @@ public class SpriteEffect : MonoBehaviour
     private float nextFlickTime;
 
     private void Start() {
-        renderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         flickerCooldown = new Cooldown(0);
     }
 
     private void Update() {
         if (flickerCooldown.on) {
             if (Time.time >= nextFlickTime) {
-                renderer.enabled = !renderer.enabled;
+                spriteRenderer.enabled = !spriteRenderer.enabled;
                 nextFlickTime = Time.time + timeTillNextFlick;
             }
         }
         else {
-            renderer.enabled = true;
+            spriteRenderer.enabled = true;
         }
     }
 
@@ -36,6 +36,6 @@ public class SpriteEffect : MonoBehaviour
     }
 
     public void FlipX(bool value) {
-        renderer.flipX = value;
+        spriteRenderer.flipX = value;
     }
 }

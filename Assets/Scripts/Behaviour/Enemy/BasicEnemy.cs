@@ -29,6 +29,9 @@ public class BasicEnemy : ShipBehaviour, IEnemy
 
     public void Activate() {
         gameObject.SetActive(true);
+        foreach (Behaviour component in GetComponents<Behaviour>()) {
+            component.enabled = true;
+        }
     }
     public void Deactivate() {
         gameObject.SetActive(false);

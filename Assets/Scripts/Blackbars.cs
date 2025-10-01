@@ -11,6 +11,10 @@ public class Blackbars : MonoBehaviour
     [SerializeField, Min(0)]
     private float corridorWidth;
 
+    private void Awake() {
+        OnValidate();
+    }
+
     private void OnValidate() {
         if (mainCamera) SetCorridorWidth(corridorWidth);
     }

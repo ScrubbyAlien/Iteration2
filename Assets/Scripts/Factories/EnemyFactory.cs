@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewEnemyFactory", menuName = "Enemy Factory")]
+[CreateAssetMenu(fileName = "NewEnemyFactory", menuName = "Factory/Enemy Factory")]
 public class EnemyFactory : Factory<IEnemy>
 {
     public override IEnemy GetProduct() {

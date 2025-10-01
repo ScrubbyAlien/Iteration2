@@ -478,6 +478,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af30b847fc91e54eab2c9c33ac2c53e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionLocator: {fileID: 11400000, guid: 789a12048dabd5c40b45bbc468088cce, type: 2}
+  explosionParameters:
+    radius: 0.5
+    rate: 5
+    duration: 1.2
   hullStrength: 5
   invincibilityTime: 1
   OnTakeDamage:
@@ -496,6 +501,21 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   OnDestroyed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3237099150787536323}
+        m_TargetAssemblyTypeName: ShipHull, Assembly-CSharp
+        m_MethodName: Explode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnExploded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8460546371102402531}

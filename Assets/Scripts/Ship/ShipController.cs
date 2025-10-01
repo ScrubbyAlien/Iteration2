@@ -33,9 +33,7 @@ public class ShipController : MonoBehaviour
             else events.GoingStraight?.Invoke();
         }
         else {
-            body.linearVelocity = Vector2.zero;
-            events.Stopped?.Invoke();
-            events.GoingStraight?.Invoke();
+            Stop();
         }
     }
 
@@ -46,6 +44,13 @@ public class ShipController : MonoBehaviour
 
     public void Stop() {
         moving = false;
+        body.linearVelocity = Vector2.zero;
+        events.Stopped?.Invoke();
+        events.GoingStraight?.Invoke();
+    }
+
+    private void OnDisable() {
+        Stop();
     }
 
     [Serializable]

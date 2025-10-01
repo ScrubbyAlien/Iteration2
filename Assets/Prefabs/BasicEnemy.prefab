@@ -181,6 +181,22 @@ MonoBehaviour:
   body: {fileID: 6211931713980005373}
   xSpeed: 3
   ySpeed: 1
+  events:
+    MovingForward:
+      m_PersistentCalls:
+        m_Calls: []
+    Stopped:
+      m_PersistentCalls:
+        m_Calls: []
+    MovingLeft:
+      m_PersistentCalls:
+        m_Calls: []
+    MovingRight:
+      m_PersistentCalls:
+        m_Calls: []
+    GoingStraight:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!114 &8199364792867574708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,11 +271,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af30b847fc91e54eab2c9c33ac2c53e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionLocator: {fileID: 11400000, guid: 789a12048dabd5c40b45bbc468088cce, type: 2}
+  explosionParameters:
+    radius: 0.35
+    rate: 9
+    duration: 0.7
   hullStrength: 1
+  invincibilityTime: 0
   OnTakeDamage:
     m_PersistentCalls:
       m_Calls: []
   OnDestroyed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8270460738182556171}
+        m_TargetAssemblyTypeName: ShipHull, Assembly-CSharp
+        m_MethodName: Explode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 803066524576452405}
+        m_TargetAssemblyTypeName: ShipController, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6435389396947071521}
+        m_TargetAssemblyTypeName: UnityEngine.BoxCollider2D, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnExploded:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7328503612754539025}

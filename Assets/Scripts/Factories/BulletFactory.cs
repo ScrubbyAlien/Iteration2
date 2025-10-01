@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Pool;
 
-[CreateAssetMenu(fileName = "BulletFactory", menuName = "Bullet Factory")]
+[CreateAssetMenu(fileName = "BulletFactory", menuName = "Factory/Bullet Factory")]
 public class BulletFactory : Factory<IBullet>
 {
     public override IBullet GetProduct() {

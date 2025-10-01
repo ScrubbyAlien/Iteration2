@@ -6,14 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="d1166eae-4800-4cb9-a143-6165b5b7a82e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Iteration2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Iteration2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animation/Player/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Player/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Background.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Background.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/Explosions/explosion1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/Explosions/explosion1.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BasicEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BasicEnemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet/BasicBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet/BasicBullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship/IDamagable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship/IDamagable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behaviour/Enemy/BasicEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviour/Enemy/BasicEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Blackbars.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Blackbars.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factories/BulletFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Factories/BulletFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factories/EnemyFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Factories/EnemyFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship/ShipController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship/ShipController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship/ShipHull.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship/ShipHull.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpriteEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpriteEffect.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +47,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Background.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Behaviour/Enemy/IEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Factories/ExplosionFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Locator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ship/IDamagable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SpriteEffect.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -56,21 +61,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="F:\Unity\Editors\6000.0.58f1\Editor\Unity.exe" />
@@ -137,6 +142,7 @@
       <updated>1759073487869</updated>
       <workItem from="1759073505782" duration="24588000" />
       <workItem from="1759148684673" duration="18547000" />
+      <workItem from="1759313185236" duration="18353000" />
     </task>
     <servers />
   </component>
