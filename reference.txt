@@ -5,9 +5,6 @@ enemies, bullets
 https://opengameart.org/content/space-shooter-sprites
 
 background
-https://craftpix.net/freebies/free-pixel-sky-with-parallax-clouds-for-2d-games/
-
-planets
 https://craftpix.net/freebies/free-planets-in-space-pixel-game-background-pack/
 
 sounds
@@ -18,3 +15,11 @@ https://opengameart.org/content/explosion-set-1-m484-games
 
 ui
 https://opengameart.org/content/low-pixel-school-tileset-and-objects-etc-16x16px
+
+music
+https://opengameart.org/content/bit-space-ftl-inspired-loop-0
+https://opengameart.org/content/fast-fight-battle-music-looped
+https://opengameart.org/content/flanked
+https://opengameart.org/content/tower-defense-theme
+https://opengameart.org/content/error-management-small-8-bit-loop
+https://opengameart.org/content/zenostar

@@ -212,6 +212,22 @@ MonoBehaviour:
   bulletFactory: {fileID: 11400000, guid: 49e7e55b09786db4eb4140f1f7c9d63d, type: 2}
   gunConfig: {fileID: 11400000, guid: 0f97fd8bf5d91334688591ebeb65b580, type: 2}
   firingRate: 0.4
+  triggerPerBullet: 0
+  OnShoot:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: f8e630b427f24ac419d88ccc4a0e351a, type: 2}
+        m_TargetAssemblyTypeName: SoundLocator, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: EnemyBullet
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7328503612754539025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +292,7 @@ MonoBehaviour:
     radius: 0.35
     rate: 9
     duration: 0.7
+    sound: Explosion
   hullStrength: 1
   invincibilityTime: 0
   OnTakeDamage:
@@ -298,6 +315,18 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 803066524576452405}
         m_TargetAssemblyTypeName: ShipController, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8199364792867574708}
+        m_TargetAssemblyTypeName: ShipGuns, Assembly-CSharp
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:

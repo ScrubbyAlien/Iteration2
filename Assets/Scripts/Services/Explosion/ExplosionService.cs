@@ -7,6 +7,8 @@ using Random = UnityEngine.Random;
 public class ExplosionService : Service<ExplosionService>
 {
     [SerializeField]
+    private SoundLocator soundLocator;
+    [SerializeField]
     private ExplosionFactory factory;
 
     protected override void Register() {
@@ -14,6 +16,7 @@ public class ExplosionService : Service<ExplosionService>
     }
 
     public void PlayExplosion(Vector2 position, ExplosionParameters p) {
+        if (p.sound != "") soundLocator.GetService().PlaySound(p.sound);
         StartCoroutine(ExplosionCoroutine(position, p.radius, p.rate, p.duration));
     }
 
@@ -42,5 +45,6 @@ public class ExplosionService : Service<ExplosionService>
         public float radius;
         public float rate;
         public float duration;
+        public string sound;
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class Service<T> : MonoBehaviour
+public abstract class Service<T> : MonoBehaviour where T : Service<T>
 {
     [SerializeField]
     protected Locator<T> locator;

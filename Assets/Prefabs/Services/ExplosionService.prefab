@@ -45,4 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locator: {fileID: 11400000, guid: 789a12048dabd5c40b45bbc468088cce, type: 2}
+  soundLocator: {fileID: 11400000, guid: f8e630b427f24ac419d88ccc4a0e351a, type: 2}
   factory: {fileID: 11400000, guid: 9704481c6ddee0d4fb095b78430567b9, type: 2}

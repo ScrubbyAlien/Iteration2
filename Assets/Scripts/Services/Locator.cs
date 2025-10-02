@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public abstract class Locator<T> : ScriptableObject
+public abstract class Locator<T> : ScriptableObject where T : Service<T>
 {
     public event Action<T> OnRegisterService;
 

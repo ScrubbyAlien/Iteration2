@@ -7,8 +7,6 @@ public class ShipGuns : MonoBehaviour
     private BulletFactory bulletFactory;
     [SerializeField, ExposeFields]
     private GunConfiguration gunConfig;
-    [SerializeField]
-    private SoundLocator soundLocator;
     [SerializeField, Tooltip("The number of bullets the guns can fire per second")]
     private float firingRate;
     private Cooldown firingCooldown;
@@ -22,6 +20,7 @@ public class ShipGuns : MonoBehaviour
     }
 
     public void FireBullet() {
+        if (!enabled) return;
         if (!firingCooldown.on) {
             if (!triggerPerBullet) OnShoot?.Invoke();
             foreach (GunInfo gunInfo in gunConfig.guns) {
@@ -41,9 +40,5 @@ public class ShipGuns : MonoBehaviour
             Vector3 pos = transform.position + (Vector3)gunInfo.position;
             Gizmos.DrawLine(pos, pos + (Vector3)gunInfo.direction);
         }
-    }
-
-    public void PlaySound(string name) {
-        soundLocator.GetService().PlaySound(name);
     }
 }

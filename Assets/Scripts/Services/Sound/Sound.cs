@@ -14,4 +14,8 @@ public class Sound : ScriptableObject
     [SerializeField, Range(-3, 3)]
     private float pitchModifier = 1;
     public float pitch => pitchModifier;
+
+    [SerializeField]
+    private bool loop;
+    public bool looping => loop;
 }
