@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ShipGuns : MonoBehaviour
 {
@@ -6,9 +7,15 @@ public class ShipGuns : MonoBehaviour
     private BulletFactory bulletFactory;
     [SerializeField, ExposeFields]
     private GunConfiguration gunConfig;
+    [SerializeField]
+    private SoundLocator soundLocator;
     [SerializeField, Tooltip("The number of bullets the guns can fire per second")]
     private float firingRate;
     private Cooldown firingCooldown;
+
+    [Tooltip("If true OnShoot will be triggered for every bullet fired instead of once per salvo")]
+    public bool triggerPerBullet;
+    public UnityEvent OnShoot;
 
     private void Awake() {
         firingCooldown = new Cooldown(1 / firingRate);
@@ -16,7 +23,9 @@ public class ShipGuns : MonoBehaviour
 
     public void FireBullet() {
         if (!firingCooldown.on) {
+            if (!triggerPerBullet) OnShoot?.Invoke();
             foreach (GunInfo gunInfo in gunConfig.guns) {
+                if (triggerPerBullet) OnShoot?.Invoke();
                 IBullet bullet = bulletFactory.GetProduct();
                 bullet.direction = gunInfo.direction;
                 bullet.position = transform.position + (Vector3)gunInfo.position;
@@ -32,5 +41,9 @@ public class ShipGuns : MonoBehaviour
             Vector3 pos = transform.position + (Vector3)gunInfo.position;
             Gizmos.DrawLine(pos, pos + (Vector3)gunInfo.direction);
         }
+    }
+
+    public void PlaySound(string name) {
+        soundLocator.GetService().PlaySound(name);
     }
 }

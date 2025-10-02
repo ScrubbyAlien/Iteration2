@@ -7,10 +7,10 @@ public abstract class Locator<T> : ScriptableObject
 
     protected T registeredService;
 
-    public void Register(T service) {
+    public virtual void Register(T service) {
         registeredService = service;
         OnRegisterService?.Invoke(service);
     }
 
-    public T GetService() => registeredService;
+    public virtual T GetService() => registeredService;
 }

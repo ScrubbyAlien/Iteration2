@@ -465,7 +465,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletFactory: {fileID: 11400000, guid: 8eb51cfbfda1f6b449f48bc9b684fab9, type: 2}
   gunConfig: {fileID: 11400000, guid: 4f21320908ef2354e9d0ca7daacd2dcb, type: 2}
+  soundLocator: {fileID: 11400000, guid: f8e630b427f24ac419d88ccc4a0e351a, type: 2}
   firingRate: 4
+  triggerPerBullet: 0
+  OnShoot:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4599968052138049706}
+        m_TargetAssemblyTypeName: ShipGuns, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PlayerBullet
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3237099150787536323
 MonoBehaviour:
   m_ObjectHideFlags: 0

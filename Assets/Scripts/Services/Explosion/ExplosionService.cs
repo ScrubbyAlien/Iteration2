@@ -4,18 +4,12 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using Random = UnityEngine.Random;
 
-public class ExplosionService : MonoBehaviour
+public class ExplosionService : Service<ExplosionService>
 {
-    [SerializeField]
-    private Locator<ExplosionService> locator;
     [SerializeField]
     private ExplosionFactory factory;
 
-    private void Start() {
-        RegisterService();
-    }
-
-    private void RegisterService() {
+    protected override void Register() {
         locator.Register(this);
     }
 

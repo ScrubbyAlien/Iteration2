@@ -11,7 +11,10 @@ planets
 https://craftpix.net/freebies/free-planets-in-space-pixel-game-background-pack/
 
 sounds
-https://opengameart.org/content/flatshot-complete-sfx-pack
+https://sfxr.me/
 
 explosions
 https://opengameart.org/content/explosion-set-1-m484-games
+
+ui
+https://opengameart.org/content/low-pixel-school-tileset-and-objects-etc-16x16px
