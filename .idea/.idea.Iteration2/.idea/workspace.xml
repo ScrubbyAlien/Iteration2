@@ -5,43 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1166eae-4800-4cb9-a143-6165b5b7a82e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Music.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Music/MusicLocator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Music/MusicLocator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Blackbars.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Blackbars/Blackbars.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Blackbars/BlackbarsLocator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Blackbars/BlackbarsLocator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Blackbars/CorridorColliders.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Blackbars/CorridorColliders.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HealthBar.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/HealthBar.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Iteration2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Iteration2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/explosion.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/explosion.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/hitHurt.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/hitHurt.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/hitHurt1.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/hitHurt1.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/laserShoot.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/laserShoot.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/laserShoot1.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/laserShoot1.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/laserShoot2.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/laserShoot2.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/laserShoot3.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/laserShoot3.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/powerUp.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/powerUp.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BasicEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BasicEnemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Blackbars.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Blackbars.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Services/ExplosionService.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Services/ExplosionService.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Services/SoundService.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Services/SoundService.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Sound/Sounds.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Sound/Sounds/PlayerBullet.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Sound/Sounds/PlayerBullet.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Explosion/ExplosionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Explosion/ExplosionService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Locator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Locator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Blackbars.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Blackbars.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Blackbars/Blackbars.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Music/MusicService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Music/MusicService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Service.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Service.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Sound/Sound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Sound/Sound.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Sound/SoundLocator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Sound/SoundLocator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Services/Sound/SoundService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Services/Sound/SoundService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship/ShipGuns.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship/ShipGuns.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/spritesheet.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/spritesheet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reference.txt" beforeDir="false" afterPath="$PROJECT_DIR$/reference.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/M484ExplosionSet1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/M484ExplosionSet1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background_loop.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background_loop.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ships_human.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/ships_human.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/spritesheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/spritesheet.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ui_box.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/ui_box.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,9 +63,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AnimatorController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Background.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Behaviour/Enemy/IEnemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Blackbars/BlackbarsLocator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Blackbars/CorridorColliders.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Factories/ExplosionFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Factories/SoundFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HealthBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Locator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Music/MusicLocator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Services/Service.cs" root0="FORCE_HIGHLIGHTING" />
@@ -185,7 +173,7 @@
       <workItem from="1759073505782" duration="24588000" />
       <workItem from="1759148684673" duration="18547000" />
       <workItem from="1759313185236" duration="18540000" />
-      <workItem from="1759396061973" duration="12578000" />
+      <workItem from="1759396061973" duration="22373000" />
     </task>
     <task id="LOCAL-00001" summary="explosions and service locator architecture added">
       <option name="closed" value="true" />

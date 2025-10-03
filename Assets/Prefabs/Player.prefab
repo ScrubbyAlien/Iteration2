@@ -500,7 +500,7 @@ MonoBehaviour:
     rate: 5
     duration: 1.2
     sound: 
-  hullStrength: 5
+  hullStrength: 32
   invincibilityTime: 1
   OnTakeDamage:
     m_PersistentCalls:

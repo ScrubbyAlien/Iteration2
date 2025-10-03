@@ -6,6 +6,8 @@ public class MusicService : Service<MusicService>
 {
     [SerializeField]
     private string musicDirectory, startMusic;
+    [SerializeField]
+    private bool mute;
 
     private AudioSource source;
     private Sound[] musics;
@@ -14,13 +16,14 @@ public class MusicService : Service<MusicService>
         locator.Register(this);
     }
 
-    protected override void Start() {
+    protected void Start() {
         source = GetComponent<AudioSource>();
         musics = Resources.LoadAll<Sound>(musicDirectory);
         if (startMusic != "") PlayMusic(startMusic);
     }
 
     public void PlayMusic(string name) {
+        if (mute) return;
         Sound music = musics.First(m => m.name == name);
         source.clip = music.clip;
         source.volume = music.volume;

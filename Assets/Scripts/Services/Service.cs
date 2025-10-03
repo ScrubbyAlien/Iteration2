@@ -7,7 +7,7 @@ public abstract class Service<T> : MonoBehaviour where T : Service<T>
 
     protected abstract void Register();
 
-    protected virtual void Start() {
+    protected virtual void Awake() {
         Register();
     }
 }

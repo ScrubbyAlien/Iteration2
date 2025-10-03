@@ -18,8 +18,7 @@ public class SoundService : Service<SoundService>
         locator.Register(this);
     }
 
-    protected override void Start() {
-        base.Start();
+    protected void Start() {
         sounds = Resources.LoadAll<Sound>(soundsDirectory);
     }
 
