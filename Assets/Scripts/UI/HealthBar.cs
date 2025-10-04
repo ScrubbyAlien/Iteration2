@@ -19,8 +19,8 @@ public class HealthBar : MonoBehaviour
 
     private void Start() {
         health = healthHaver.GetComponent<IIntegerStat>();
-        health.OnStatChange += AdjustHealthBar;
-        currentPips = health.initialValue * pipsPerHealth;
+        health.OnIntStatChange += AdjustHealthBar;
+        currentPips = health.initialIntValue * pipsPerHealth;
         pipsBaseHeight = pips.rectTransform.rect.height;
     }
 

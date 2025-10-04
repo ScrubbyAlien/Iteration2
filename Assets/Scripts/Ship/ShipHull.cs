@@ -6,9 +6,9 @@ using UnityEngine.Events;
 public class ShipHull : MonoBehaviour, IDamagable, IIntegerStat
 {
     public string statId => "shiphull";
-    public event Action<int> OnStatChange;
-    public int read => currentStrength;
-    public int initialValue => hullStrength;
+    public event Action<int> OnIntStatChange;
+    public int readInt => currentStrength;
+    public int initialIntValue => hullStrength;
 
     [SerializeField]
     private ExplosionLocator explosionLocator;
@@ -23,7 +23,7 @@ public class ShipHull : MonoBehaviour, IDamagable, IIntegerStat
         get => _cs;
         set {
             _cs = value;
-            OnStatChange?.Invoke(value);
+            OnIntStatChange?.Invoke(value);
         }
     }
 

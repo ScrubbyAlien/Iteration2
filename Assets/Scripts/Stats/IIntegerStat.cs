@@ -3,7 +3,7 @@ using UnityEngine;
 
 public interface IIntegerStat : IStat
 {
-    public event Action<int> OnStatChange;
-    public int read { get; }
-    public int initialValue { get; }
+    public event Action<int> OnIntStatChange;
+    public int readInt { get; }
+    public int initialIntValue { get; }
 }
