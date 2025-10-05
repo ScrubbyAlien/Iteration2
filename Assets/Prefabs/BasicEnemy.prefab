@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6435389396947071521}
   - component: {fileID: 803066524576452405}
   - component: {fileID: 8199364792867574708}
-  - component: {fileID: 7328503612754539025}
+  - component: {fileID: 7860227739198037302}
   - component: {fileID: 8270460738182556171}
   m_Layer: 7
   m_Name: BasicEnemy
@@ -211,7 +211,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletFactory: {fileID: 11400000, guid: 49e7e55b09786db4eb4140f1f7c9d63d, type: 2}
   gunConfig: {fileID: 11400000, guid: 0f97fd8bf5d91334688591ebeb65b580, type: 2}
-  firingRate: 0.4
   triggerPerBullet: 0
   OnShoot:
     m_PersistentCalls:
@@ -228,7 +227,7 @@ MonoBehaviour:
           m_StringArgument: EnemyBullet
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7328503612754539025
+--- !u!114 &7860227739198037302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -237,7 +236,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4737511977477081042}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cad227be9490534b9f7f8690f1be4df, type: 3}
+  m_Script: {fileID: 11500000, guid: dbabe10b98020c54298314bcf3b419d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   yBottom: -6
@@ -275,6 +274,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  movementPattern: {fileID: 11400000, guid: fe2a8f0ef37ba4548a0586f4f0c6364f, type: 2}
+  shootingPattern: {fileID: 11400000, guid: 3a17cd4e4c4f4ee45b4dc8c695d3416f, type: 2}
+  contactDamage: 4
   scoreLocator: {fileID: 11400000, guid: 31230943065b9b24c9fbe8de4d85392d, type: 2}
   scoreValue: 25
 --- !u!114 &8270460738182556171
@@ -351,8 +353,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7328503612754539025}
-        m_TargetAssemblyTypeName: BasicEnemy, Assembly-CSharp
+      - m_Target: {fileID: 7860227739198037302}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
         m_MethodName: ReleaseScore
         m_Mode: 1
         m_Arguments:
@@ -366,8 +368,8 @@ MonoBehaviour:
   OnExploded:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7328503612754539025}
-        m_TargetAssemblyTypeName: BasicEnemy, Assembly-CSharp
+      - m_Target: {fileID: 7860227739198037302}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
         m_MethodName: Die
         m_Mode: 1
         m_Arguments:

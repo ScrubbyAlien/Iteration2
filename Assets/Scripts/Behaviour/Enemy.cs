@@ -1,9 +1,15 @@
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.Pool;
 
-public class BasicEnemy : ShipBehaviour, IEnemy
+public class Enemy : ShipBehaviour, IPoolObject
 {
+    [SerializeField]
+    private MovementPattern movementPattern;
+    [SerializeField]
+    private ShootingPattern shootingPattern;
+
+    [SerializeField]
+    private int contactDamage;
     [SerializeField]
     private ScoreLocator scoreLocator;
     [SerializeField]
@@ -12,7 +18,6 @@ public class BasicEnemy : ShipBehaviour, IEnemy
     public ObjectPool<IPoolObject> pool { get; set; }
     public GameObject gameObjectRef => gameObject;
 
-    /// <inheritdoc />
     public Vector2 position {
         get => transform.position;
         set => transform.position = new Vector3(value.x, value.y, transform.position.z);
@@ -21,8 +26,10 @@ public class BasicEnemy : ShipBehaviour, IEnemy
     private bool scoreReleased;
 
     private void Update() {
-        Move?.Invoke(Vector2.down);
-        if (!shootDelayCooldown.on) Shoot?.Invoke();
+        if (movementPattern.GetNextDirection(gameObject, out Vector2 direction)) Move?.Invoke(direction);
+        else Stop?.Invoke();
+
+        shootingPattern.EvaluateIfShouldShoot(Shoot);
 
         if (transform.position.y < yBottom) {
             Die();
@@ -49,6 +56,12 @@ public class BasicEnemy : ShipBehaviour, IEnemy
         if (!scoreReleased) {
             scoreLocator.GetService().GainScore(scoreValue);
             scoreReleased = true;
+        }
+    }
+
+    public void OnTriggerStay2D(Collider2D other) {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player")) {
+            other.gameObject.GetComponent<IDamagable>().TakeDamage(contactDamage);
         }
     }
 }

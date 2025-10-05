@@ -53,7 +53,6 @@ public class ScoreService : Service<ScoreService>, IIntegerStat, IFloatStat
     }
 
     public void GainScore(int score) {
-        Debug.Log(currentMultiplier);
         currentScore += Mathf.RoundToInt(score * currentMultiplier);
         currentMultiplier += multiplierIncramentSize;
         multiplierDieTime = Time.time + multiplierLifetime;

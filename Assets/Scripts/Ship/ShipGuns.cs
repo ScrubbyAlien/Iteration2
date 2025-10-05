@@ -7,8 +7,6 @@ public class ShipGuns : MonoBehaviour
     private BulletFactory bulletFactory;
     [SerializeField, ExposeFields]
     private GunConfiguration gunConfig;
-    [SerializeField, Tooltip("The number of bullets the guns can fire per second")]
-    private float firingRate;
     private Cooldown firingCooldown;
 
     [Tooltip("If true OnShoot will be triggered for every bullet fired instead of once per salvo")]
@@ -16,7 +14,7 @@ public class ShipGuns : MonoBehaviour
     public UnityEvent OnShoot;
 
     private void Awake() {
-        firingCooldown = new Cooldown(1 / firingRate);
+        firingCooldown = new Cooldown(1 / gunConfig.fireRate);
     }
 
     public void FireBullet() {

@@ -4,6 +4,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GunConfiguration", menuName = "Gun Configuration")]
 public class GunConfiguration : ScriptableObject
 {
+    [Tooltip("The number of bullets the guns can fire per second")]
+    public float fireRate;   
     public GunInfo[] guns;
 }
 

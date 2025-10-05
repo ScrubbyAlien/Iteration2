@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 812e8eead953e7444b4a23dafd6f595e, type: 3}
   m_Name: OneBarrelDown
   m_EditorClassIdentifier: 
+  fireRate: 0.5
   guns:
   - position: {x: 0, y: -0.36}
     angle: -90
