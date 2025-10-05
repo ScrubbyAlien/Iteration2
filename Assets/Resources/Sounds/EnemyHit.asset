@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 849c7d54ec1f2e248b64e5bfca3d2296, type: 3}
-  m_Name: PlayerBullet
+  m_Name: EnemyHit
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 72abdaedafeded843881d8bb4692aaf0, type: 3}
-  volumeScale: 1
+  audioClip: {fileID: 8300000, guid: 7b8f6a3f98a21bb4081697a9dffad23f, type: 3}
+  volumeScale: 0.589
   pitchModifier: 1
   loop: 0

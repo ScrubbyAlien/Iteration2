@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 849c7d54ec1f2e248b64e5bfca3d2296, type: 3}
-  m_Name: PlayerBullet
+  m_Script: {fileID: 11500000, guid: ba331fe741df4029a2ef7038f272660b, type: 3}
+  m_Name: BurstFire1,3
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 72abdaedafeded843881d8bb4692aaf0, type: 3}
-  volumeScale: 1
-  pitchModifier: 1
-  loop: 0
+  burstDuration: 1
+  burstWait: 3

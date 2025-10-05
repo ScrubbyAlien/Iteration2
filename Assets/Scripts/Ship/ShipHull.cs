@@ -36,8 +36,12 @@ public class ShipHull : MonoBehaviour, IDamagable, IIntegerStat
     public UnityEvent OnExploded;
 
     private void Start() {
-        currentStrength = hullStrength;
+        InitializeStrength();
         invincibilityCooldown = new Cooldown(invincibilityTime);
+    }
+
+    public void InitializeStrength() {
+        currentStrength = hullStrength;
     }
 
     public void TakeDamage(int amount) {

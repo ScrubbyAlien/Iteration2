@@ -1,11 +1,17 @@
+using System;
 using UnityEngine;
 using UnityEngine.Pool;
+using UnityEngine.Serialization;
 
 public class Enemy : ShipBehaviour, IPoolObject
 {
-    [SerializeField]
+    public event Action OnDeactivate;
+
+    [FormerlySerializedAs("movementPattern"), SerializeField, ExposeFields]
+    private MovementPattern movementPatternAsset;
     private MovementPattern movementPattern;
-    [SerializeField]
+    [FormerlySerializedAs("shootingPattern"), SerializeField, ExposeFields]
+    private ShootingPattern shootingPatternAsset;
     private ShootingPattern shootingPattern;
 
     [SerializeField]
@@ -24,12 +30,21 @@ public class Enemy : ShipBehaviour, IPoolObject
     }
 
     private bool scoreReleased;
+    private bool startedShooting;
 
     private void Update() {
-        if (movementPattern.GetNextDirection(gameObject, out Vector2 direction)) Move?.Invoke(direction);
+        if (movementPattern.GetNextDirection(this, out Vector2 direction)) {
+            Move?.Invoke(direction);
+        }
         else Stop?.Invoke();
 
-        shootingPattern.EvaluateIfShouldShoot(Shoot);
+        if (!shootDelayCooldown.on) {
+            if (!startedShooting) {
+                shootingPattern.OnStartShooting();
+                startedShooting = true;
+            }
+            shootingPattern.EvaluateIfShouldShoot(Shoot);
+        }
 
         if (transform.position.y < yBottom) {
             Die();
@@ -44,11 +59,16 @@ public class Enemy : ShipBehaviour, IPoolObject
     public void Activate() {
         gameObject.SetActive(true);
         scoreReleased = false;
+        startedShooting = false;
         foreach (Behaviour component in GetComponents<Behaviour>()) {
             component.enabled = true;
         }
+        GetComponent<ShipHull>()?.InitializeStrength();
+        movementPattern = movementPatternAsset.Copy(transform.position);
+        shootingPattern = shootingPatternAsset.Copy();
     }
     public void Deactivate() {
+        OnDeactivate?.Invoke();
         gameObject.SetActive(false);
     }
 
@@ -61,7 +81,12 @@ public class Enemy : ShipBehaviour, IPoolObject
 
     public void OnTriggerStay2D(Collider2D other) {
         if (other.gameObject.layer == LayerMask.NameToLayer("Player")) {
-            other.gameObject.GetComponent<IDamagable>().TakeDamage(contactDamage);
+            IDamagable damagable = other.gameObject.GetComponent<IDamagable>();
+            if (!damagable.invincible) damagable.TakeDamage(contactDamage);
         }
+    }
+
+    private void OnDrawGizmosSelected() {
+        movementPatternAsset.DrawGizmos(transform);
     }
 }

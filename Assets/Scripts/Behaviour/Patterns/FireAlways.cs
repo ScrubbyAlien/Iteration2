@@ -8,4 +8,9 @@ public class FireAlways : ShootingPattern
     public override void EvaluateIfShouldShoot(UnityEvent shoot) {
         shoot?.Invoke();
     }
+
+    /// <inheritdoc />
+    public override ShootingPattern Copy() {
+        return ScriptableObject.CreateInstance<FireAlways>();
+    }
 }
