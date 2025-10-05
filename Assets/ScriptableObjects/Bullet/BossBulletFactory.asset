@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 812e8eead953e7444b4a23dafd6f595e, type: 3}
-  m_Name: OneBarrelUp
+  m_Script: {fileID: 11500000, guid: 2105de141ef71da48b87baa6829a1a4c, type: 3}
+  m_Name: BossBulletFactory
   m_EditorClassIdentifier: 
-  fireRate: 3
-  guns:
-  - position: {x: 0, y: 0.36}
-    angle: 90
+  prefab: {fileID: 797242979147577325, guid: e111cedf2fcd4d94382a7b756265e63f, type: 3}
+  sortingName: =====BulletPool=====
+  collectionCheck: 1
+  defaultCapacity: 20
+  maxCapacity: 100

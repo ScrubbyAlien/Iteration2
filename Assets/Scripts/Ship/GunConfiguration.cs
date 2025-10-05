@@ -5,7 +5,7 @@ using UnityEngine;
 public class GunConfiguration : ScriptableObject
 {
     [Tooltip("The number of bullets the guns can fire per second")]
-    public float fireRate;   
+    public float fireRate;
     public GunInfo[] guns;
 }
 
@@ -14,6 +14,8 @@ public struct GunInfo
 {
     public Vector2 position;
     public float angle;
+    [Min(0)]
+    public int stagger;
     public Vector2 direction {
         get {
             float rad = angle * Mathf.Deg2Rad;

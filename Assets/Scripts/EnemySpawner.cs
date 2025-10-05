@@ -21,6 +21,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField, Min(0)]
     private int enemyLimit;
 
+    private int spawnedEnemies;
+
     private void OnValidate() {
         if (minXSpawnPosition > maxXSpawnPosition) maxXSpawnPosition = minXSpawnPosition;
     }
@@ -32,9 +34,11 @@ public class EnemySpawner : MonoBehaviour
     void Update() {
         if (Time.time < spawnDelaySeconds) return;
         if (!spawnCooldown.on) {
+            if (limitNumber && spawnedEnemies >= enemyLimit) return;
             Enemy enemy = enemyFactory.GetProduct();
             enemy.position = new Vector2(Random.Range(minXSpawnPosition, maxXSpawnPosition), ySpawnPosition);
             spawnCooldown.Start();
+            spawnedEnemies++;
         }
     }
 }

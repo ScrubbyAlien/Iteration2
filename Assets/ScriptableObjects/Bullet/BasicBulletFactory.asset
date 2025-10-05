@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BasicBulletFactory
   m_EditorClassIdentifier: 
   prefab: {fileID: 5163385099153946720, guid: eebb0ec37fdb8ab4a8a7d1ceb654154e, type: 3}
-  poolName: =====BasicBulletPool=====
+  sortingName: =====BulletPool=====
   collectionCheck: 1
   defaultCapacity: 20
   maxCapacity: 100

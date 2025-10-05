@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 812e8eead953e7444b4a23dafd6f595e, type: 3}
-  m_Name: OneBarrelUp
+  m_Script: {fileID: 11500000, guid: ba331fe741df4029a2ef7038f272660b, type: 3}
+  m_Name: BurstFireBoss
   m_EditorClassIdentifier: 
-  fireRate: 3
-  guns:
-  - position: {x: 0, y: 0.36}
-    angle: 90
+  burstDuration: 1.4
+  burstWait: 4

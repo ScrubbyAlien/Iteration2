@@ -5,26 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1166eae-4800-4cb9-a143-6165b5b7a82e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/BurstFire.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/BurstFire.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/ZigZag.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/ZigZag.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/FollowPath.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/FollowPath.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Iteration2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Iteration2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Background.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Background.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BasicEnemy.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BasicEnemy.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/EnemyBullet.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sounds/EnemyBullet.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sounds/PlayerBullet.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sounds/PlayerBullet.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Enemy/BasicEnemyFactory.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Enemy/BasicEnemyFactory.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behaviour/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviour/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/FireAlways.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/FireAlways.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/MovementPattern.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/MovementPattern.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/ShootingPattern.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/ShootingPattern.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/StraightDownPattern.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/StraightDownPattern.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factories/IPoolObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Factories/IPoolObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship/ShipHull.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship/ShipHull.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Bullet/BasicBulletFactory.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Bullet/BasicBulletFactory.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Bullet/EnemyBasicBulletFactory.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Bullet/EnemyBasicBulletFactory.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/GunConfig/OneBarrelUp.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/GunConfig/OneBarrelUp.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship/GunConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship/GunConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ship/ShipGuns.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ship/ShipGuns.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ships_human.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/ships_human.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ships_human.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/ships_human.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +55,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Background.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/BurstFire.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/FireAlways.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/FollowPath.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/MovementPattern.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/ShootingPattern.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Behaviour/Patterns/StraightDownPattern.cs" root0="FORCE_HIGHLIGHTING" />
@@ -183,7 +176,7 @@
       <workItem from="1759396061973" duration="22648000" />
       <workItem from="1759485619017" duration="4606000" />
       <workItem from="1759572861839" duration="15443000" />
-      <workItem from="1759663903481" duration="13178000" />
+      <workItem from="1759663903481" duration="17655000" />
     </task>
     <task id="LOCAL-00001" summary="explosions and service locator architecture added">
       <option name="closed" value="true" />
