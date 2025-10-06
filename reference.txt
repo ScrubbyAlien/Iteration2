@@ -1,7 +1,7 @@
-ship
+ship, enemies
 https://opengameart.org/content/shmup-ships
 
-enemies, bullets
+bullets
 https://opengameart.org/content/space-shooter-sprites
 
 background
@@ -17,9 +17,7 @@ ui
 https://opengameart.org/content/low-pixel-school-tileset-and-objects-etc-16x16px
 
 music
-https://opengameart.org/content/bit-space-ftl-inspired-loop-0
-https://opengameart.org/content/fast-fight-battle-music-looped
 https://opengameart.org/content/flanked
-https://opengameart.org/content/tower-defense-theme
-https://opengameart.org/content/error-management-small-8-bit-loop
-https://opengameart.org/content/zenostar
+
+font
+https://fontlibrary.org/en/font/pixel-operator
