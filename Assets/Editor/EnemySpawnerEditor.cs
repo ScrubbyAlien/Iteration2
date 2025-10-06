@@ -14,6 +14,7 @@ public class EnemySpawnerEditor : MonoBehaviourEditor
     private SerializedProperty maxXSpawnPosition;
     private SerializedProperty limitNumber;
     private SerializedProperty enemyLimit;
+    private SerializedProperty allEnemiesDestroyed;
 
     private void OnEnable() {
         spawner = target as EnemySpawner;
@@ -26,6 +27,7 @@ public class EnemySpawnerEditor : MonoBehaviourEditor
         maxXSpawnPosition = serializedObject.FindProperty("maxXSpawnPosition");
         limitNumber = serializedObject.FindProperty("limitNumber");
         enemyLimit = serializedObject.FindProperty("enemyLimit");
+        allEnemiesDestroyed = serializedObject.FindProperty("allEnemiesDestroyed");
     }
 
     /// <inheritdoc />
@@ -49,6 +51,10 @@ public class EnemySpawnerEditor : MonoBehaviourEditor
             if (enemyLimit.intValue < 0) enemyLimit.intValue = 0;
         }
         EditorGUILayout.EndHorizontal();
+
+        if (limitNumber.boolValue) {
+            EditorGUILayout.PropertyField(allEnemiesDestroyed);
+        }
 
         serializedObject.ApplyModifiedProperties();
     }

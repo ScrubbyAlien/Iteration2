@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Pool;
 using UnityEngine.Serialization;
 
@@ -20,6 +21,8 @@ public class Enemy : ShipBehaviour, IPoolObject
     private ScoreLocator scoreLocator;
     [SerializeField]
     private int scoreValue;
+
+    public UnityEvent<Enemy> OnActivate;
 
     public ObjectPool<IPoolObject> pool { get; set; }
     public GameObject gameObjectRef => gameObject;
@@ -66,6 +69,8 @@ public class Enemy : ShipBehaviour, IPoolObject
         GetComponent<ShipHull>()?.InitializeStrength();
         movementPattern = movementPatternAsset.Copy(transform.position);
         shootingPattern = shootingPatternAsset.Copy();
+        OnDeactivate = null;
+        OnActivate?.Invoke(this);
     }
     public void Deactivate() {
         OnDeactivate?.Invoke();

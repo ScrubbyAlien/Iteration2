@@ -18,6 +18,7 @@ public class PlayerInputHandler : ShipBehaviour
     }
 
     private void OnShoot(InputValue value) {
+        if (shootDelayCooldown.on) return;
         shooting = value.isPressed;
         if (shooting) Shoot?.Invoke();
     }

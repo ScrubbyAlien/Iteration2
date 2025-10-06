@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yBottom: 0
-  shootDelay: 0
+  shootDelay: 1
   Move:
     m_PersistentCalls:
       m_Calls:
@@ -465,7 +465,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletFactory: {fileID: 11400000, guid: 8eb51cfbfda1f6b449f48bc9b684fab9, type: 2}
   gunConfig: {fileID: 11400000, guid: 4f21320908ef2354e9d0ca7daacd2dcb, type: 2}
-  firingRate: 4
   triggerPerBullet: 0
   OnShoot:
     m_PersistentCalls:
@@ -575,6 +574,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: dd6c4790d6d331b46a4031e53aae7814, type: 2}
+        m_TargetAssemblyTypeName: WinLosePort, Assembly-CSharp
+        m_MethodName: PlayerDied
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

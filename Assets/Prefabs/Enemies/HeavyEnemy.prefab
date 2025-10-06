@@ -69,6 +69,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7860227739198037302, guid: ac6d6b56e4d9a124b971bcad3f13ab72, type: 3}
+      propertyPath: shootDelay
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860227739198037302, guid: ac6d6b56e4d9a124b971bcad3f13ab72, type: 3}
       propertyPath: movementPattern
       value: 
       objectReference: {fileID: 11400000, guid: 4266017252eccf74d9ba230779b2cff0, type: 2}
